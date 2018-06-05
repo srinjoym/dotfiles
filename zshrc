@@ -9,4 +9,5 @@ SPACESHIP_PROMPT_ORDER=(
   char          # Prompt character
 )
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
-export SPACESHIP_PROMPT_SEPARATE_LINE=false 
+export SPACESHIP_PROMPT_SEPARATE_LINE=false
+source ~/.rvm/scripts/rvm 

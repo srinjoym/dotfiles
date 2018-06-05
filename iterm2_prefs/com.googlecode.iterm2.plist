@@ -920,9 +920,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>268 107 599 501 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>404 529 796 473 0 0 1680 1028 </string>
+	<string>404 551 796 473 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1680 1028 0 0 1680 1028 </string>
+	<string>0 478 665 550 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>506 349 665 550 0 0 1680 1028 </string>
 	<key>New Bookmarks</key>
