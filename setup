@@ -1,7 +1,7 @@
 #link dotfiles to home directory
 function link_scripts(){
-	for i in *(.); do
-		if [[ $i != "setup.zsh" ]]; then
+	for i in *; do
+		if [[ -f "$file" && $i != "setup.zsh" ]]; then
     			echo "Linked $i"
 			ln -s "~/.$i" "$i"
 		fi
