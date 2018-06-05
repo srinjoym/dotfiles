@@ -1,5 +1,5 @@
 #link dotfiles to home directory
-function linkScripts(){
+function link_scripts(){
 	for i in *(.); do
 		if [[ $i != "setup.zsh" ]]; then
     			echo "Linked $i"
@@ -9,7 +9,7 @@ function linkScripts(){
 }
 
 #install zsh and antibody
-function installZsh(){
+function install_zsh(){
 	#check if homebrew installed
 	command -v brew >/dev/null 2>&1 || { echo >&2 "Installing Homebrew Now"; \
 	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
@@ -18,5 +18,17 @@ function installZsh(){
 	brew install getantibody/tap/antibody
 }
 
-installZsh
-linkScripts
+#install and configure iterm
+function install_iterm2(){
+	brew cask install iterm2
+	git clone https://github.com/powerline/fonts.git --depth=1
+	cd fonts
+	./install.sh
+	cd ..
+	rm -rf fonts
+}
+
+
+install_zsh
+link_scripts
+install_iterm2
