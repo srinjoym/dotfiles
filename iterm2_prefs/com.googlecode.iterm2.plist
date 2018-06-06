@@ -920,9 +920,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>268 107 599 501 0 0 1680 1028 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>404 551 796 473 0 0 1680 1028 </string>
+	<string>404 584 918 401 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 478 665 550 0 0 1680 1028 </string>
+	<string>0 18 1673 1010 0 0 1680 1028 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>506 349 665 550 0 0 1680 1028 </string>
 	<key>New Bookmarks</key>
@@ -1092,16 +1092,12 @@
 			<true/>
 			<key>Background Color</key>
 			<dict>
-				<key>Alpha Component</key>
-				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.187164306640625</real>
-				<key>Color Space</key>
-				<string>sRGB</string>
+				<real>0.097707755863666534</real>
 				<key>Green Component</key>
-				<real>0.0023104236461222172</real>
+				<real>0.092142701148986816</real>
 				<key>Red Component</key>
-				<real>0.033066752551710342</real>
+				<real>0.086937598884105682</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -1329,13 +1325,6 @@
 					<key>Text</key>
 					<string>[1;2D</string>
 				</dict>
-				<key>0xf702-0x240000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5D</string>
-				</dict>
 				<key>0xf702-0x260000</key>
 				<dict>
 					<key>Action</key>
@@ -1356,13 +1345,6 @@
 					<integer>10</integer>
 					<key>Text</key>
 					<string>[1;2C</string>
-				</dict>
-				<key>0xf703-0x240000</key>
-				<dict>
-					<key>Action</key>
-					<integer>10</integer>
-					<key>Text</key>
-					<string>[1;5C</string>
 				</dict>
 				<key>0xf703-0x260000</key>
 				<dict>
