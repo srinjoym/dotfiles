@@ -1,2 +1,2 @@
-ln -s gitconfig ~/.gitconfig
+ln -s $(pwd)/gitconfig ~/.gitconfig
 echo "Linked gitconfig!"

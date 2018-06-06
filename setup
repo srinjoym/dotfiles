@@ -1,15 +1,11 @@
 # set -x
-
 #link dotfiles to home directory
 function install_scripts(){
 	for d in ./*/; do
-		#if [[ -f "$file" && $i != "setup.zsh" ]]; then
-    		#	echo "Linked $i"
-		#	ln -s "~/.$i" "$i"
-		#fi
 		echo "Running $(basename $d) install script"
-		source "$d/install.sh"
+		cd $d
+		source "install.sh"
+		cd ..
 	done
 }
-
 install_scripts

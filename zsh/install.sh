@@ -10,8 +10,8 @@ function install_zsh(){
 }
 
 function link_files(){
-	ln -s zshrc ~/.zshrc
-	ln -s zsh_plugins.txt ~/.zsh_plugins.txt
+	ln -s $(pwd)/zshrc ~/.zshrc
+	ln -s $(pwd)/zsh_plugins.txt ~/.zsh_plugins.txt
 	echo "Linked zsh dot files"
 }
 
