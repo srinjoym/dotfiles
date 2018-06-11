@@ -1,3 +1,4 @@
+#!/bin/bash
 #install zsh and antibody
 function install_zsh(){
         #check if homebrew installed

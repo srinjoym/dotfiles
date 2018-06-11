@@ -1,3 +1,4 @@
+#!/bin/bash
 #install and configure iterm
 function install_iterm2(){
         brew cask install iterm2

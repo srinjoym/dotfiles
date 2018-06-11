@@ -1,3 +1,4 @@
+#!/bin/zsh
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
 
@@ -18,3 +19,7 @@ bindkey '^[[B' history-substring-search-down
 
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx 
+
+code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+eval "$(nodenv init -)"

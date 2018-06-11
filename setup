@@ -8,4 +8,5 @@ function install_scripts(){
 		cd ..
 	done
 }
+sudo -v
 install_scripts
