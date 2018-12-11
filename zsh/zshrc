@@ -25,4 +25,5 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
   eval "$(nodenv init -)"
 elif [[ "$OSTYPE" == "linux-gnu" ]]; then
   export ROS_VM="/media/psf/ROS_VM"
+  source /opt/ros/kinetic/setup.zsh
 fi
