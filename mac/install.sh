@@ -1,2 +1,4 @@
 #!/bin/bash
-source macos
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    source macos
+fi

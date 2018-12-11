@@ -9,5 +9,7 @@ function install_iterm2(){
         rm -rf fonts
 }
 
-install_iterm2
-echo "Installed iterm2, remember to configure manually"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+        install_iterm2
+        echo "Installed iterm2, remember to configure manually"
+fi

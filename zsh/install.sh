@@ -1,12 +1,18 @@
 #!/bin/bash
 #install zsh and antibody
 function install_zsh(){
-        #check if homebrew installed
-        command -v brew >/dev/null 2>&1 || { echo >&2 "Installing Homebrew Now"; \
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
-        brew install zsh
-        chsh -s /usr/local/bin/zsh
-        brew install getantibody/tap/antibody
+        if [[ "$OSTYPE" == "darwin"* ]]; then
+                #check if homebrew installed
+                command -v brew >/dev/null 2>&1 || { echo >&2 "Installing Homebrew Now"; \
+                /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"; }
+                brew install zsh
+                chsh -s /usr/local/bin/zsh
+        elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+                sudo apt-get install zsh
+                chsh -s $(which zsh)
+        fi
+t
+        curl -sL git.io/antibody | sh -s
 	echo "Installed zsh and antibody"
 }
 

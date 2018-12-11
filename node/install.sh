@@ -1,2 +1,4 @@
 #!/bin/bash
-source node.sh
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    source node.sh
+fi

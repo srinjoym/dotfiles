@@ -12,8 +12,6 @@ SPACESHIP_PROMPT_ORDER=(
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
 export SPACESHIP_PROMPT_SEPARATE_LINE=false
 
-source ~/.rvm/scripts/rvm
-
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
@@ -22,4 +20,9 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 
-eval "$(nodenv init -)"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  source ~/.rvm/scripts/rvm
+  eval "$(nodenv init -)"
+elif [[ "$OSTYPE" == "linux-gnu" ]]; then
+  export ROS_VM="/media/psf/ROS_VM"
+fi
