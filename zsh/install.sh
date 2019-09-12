@@ -1,4 +1,7 @@
 #!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
 #install zsh and antibody
 function install_zsh(){
         if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -17,8 +20,8 @@ t
 }
 
 function link_files(){
-	ln -s $(pwd)/zshrc ~/.zshrc
-	ln -s $(pwd)/zsh_plugins.txt ~/.zsh_plugins.txt
+	ln -s $DIR/zshrc ~/.zshrc
+	ln -s $DIR/zsh_plugins.txt ~/.zsh_plugins.txt
 	echo "Linked zsh dot files"
 }
 
