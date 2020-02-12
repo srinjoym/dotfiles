@@ -14,8 +14,13 @@ function install_zsh(){
                 sudo apt-get install zsh
                 chsh -s $(which zsh)
         fi
-t
-        curl -sL git.io/antibody | sh -s
+
+        # Temporary hack to get antibody to work on WSL
+        if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
+                curl -sfL git.io/antibody | sh -s - -b ~/.local/bin
+        else
+                curl -sL git.io/antibody | sh -s
+        fi
 	echo "Installed zsh and antibody"
 }
 

@@ -6,7 +6,6 @@
 	email = srinjoy.majumdar@gmail.com
 	signingkey = D0301E9B62C44248
 [commit]
-	gpgsign = true
 [diff "jupyternotebook"]
 	command = git-nbdiffdriver diff
 [merge "jupyternotebook"]

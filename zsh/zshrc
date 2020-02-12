@@ -1,4 +1,10 @@
 #!/bin/zsh
+
+# Temporary hack to get antibody to work on WSL
+if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
+  export PATH=${HOME}/.local/bin:$PATH
+fi
+
 source <(antibody init)
 antibody bundle < ~/.zsh_plugins.txt
 
@@ -17,29 +23,24 @@ HISTSIZE=10000
 SAVEHIST=10000
 setopt appendhistory
 
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
-
-if [[ "$OSTYPE" == "darwin"* ]]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-  eval "$(nodenv init -)"
-elif [[ "$OSTYPE" == "linux-gnu" ]]; then
-  export ROS_VM="/media/psf/ROS_VM"
-  source /opt/ros/kinetic/setup.zsh
-fi
-
-# Aliases
-alias git=hub
-alias jp=jupyter-notebook
-
 # Exports
 export SPACESHIP_PROMPT_ADD_NEWLINE=false
 export SPACESHIP_PROMPT_SEPARATE_LINE=false
 export CLICOLOR=1
 export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
-export LDFLAGS="-L/usr/local/opt/openblas/lib"
-export CPPFLAGS="-I/usr/local/opt/openblas/include"
-export PKG_CONFIG_PATH="/usr/local/opt/openblas/lib/pkgconfig"
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+  eval "$(nodenv init -)"
 
-export GOPATH=$HOME/software/go
+  # Aliases
+  alias git=hub
+  alias jp=jupyter-notebook
+
+  #VSCode Shortcut
+  code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+
+elif grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
+  # WSL Specific Configuration
+fi
